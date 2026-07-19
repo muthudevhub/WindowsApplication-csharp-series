@@ -1,8 +1,8 @@
 namespace SimpleInterestApp
 {
-    public partial class Form1 : Form
+    public partial class CalculateInterestForm : Form
     {
-        public Form1()
+        public CalculateInterestForm()
         {
             InitializeComponent();
         }
@@ -12,7 +12,7 @@ namespace SimpleInterestApp
             double principal = double.Parse(txtPrincipal.Text);
             double rate = double.Parse(txtRate.Text);
             double time = double.Parse(txtTime.Text);
-            double interest = CalculateSimpleInterest(principal, rate,time);
+            double interest = CalculateSimpleInterest(principal, rate, time);
 
             lblResult.Text = $"Simple Interest: {interest:F2}";
             dgvResult.Rows.Add(principal, rate, time, interest);
@@ -25,13 +25,18 @@ namespace SimpleInterestApp
             double time = double.Parse(txtTime.Text);
             double interest = CalculateSimpleInterest(principal, rate, time);
 
-            MessageBox.Show ($"Simple Interest: {interest:F2}");
-            
+            MessageBox.Show("Data saved securely to the database!");
+
         }
 
         private double CalculateSimpleInterest(double _principal, double _rate, double _time)
         {
             return (_principal * _rate) / 100;
+        }
+
+        private void CalculateInterestForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

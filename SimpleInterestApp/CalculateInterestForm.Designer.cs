@@ -1,6 +1,6 @@
 ﻿namespace SimpleInterestApp
 {
-    partial class Form1
+    partial class CalculateInterestForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -48,65 +48,73 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10.8F);
             label1.Location = new Point(284, 69);
             label1.Name = "label1";
-            label1.Size = new Size(66, 20);
+            label1.Size = new Size(78, 25);
             label1.TabIndex = 0;
             label1.Text = "Principal";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10.8F);
             label2.Location = new Point(284, 114);
             label2.Name = "label2";
-            label2.Size = new Size(65, 20);
+            label2.Size = new Size(77, 25);
             label2.TabIndex = 1;
             label2.Text = "Rate (%)";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 10.8F);
             label3.Location = new Point(284, 168);
             label3.Name = "label3";
-            label3.Size = new Size(90, 20);
+            label3.Size = new Size(105, 25);
             label3.TabIndex = 2;
             label3.Text = "Time (Years)";
             // 
             // lblResult
             // 
             lblResult.AutoSize = true;
+            lblResult.Font = new Font("Segoe UI", 10.8F);
             lblResult.Location = new Point(284, 221);
             lblResult.Name = "lblResult";
-            lblResult.Size = new Size(49, 20);
+            lblResult.Size = new Size(59, 25);
             lblResult.TabIndex = 3;
             lblResult.Text = "Result";
             // 
             // txtPrincipal
             // 
+            txtPrincipal.Font = new Font("Segoe UI", 10.8F);
             txtPrincipal.Location = new Point(466, 62);
             txtPrincipal.Name = "txtPrincipal";
-            txtPrincipal.Size = new Size(125, 27);
+            txtPrincipal.Size = new Size(125, 31);
             txtPrincipal.TabIndex = 4;
             // 
             // txtRate
             // 
+            txtRate.Font = new Font("Segoe UI", 10.8F);
             txtRate.Location = new Point(466, 111);
             txtRate.Name = "txtRate";
-            txtRate.Size = new Size(125, 27);
+            txtRate.Size = new Size(125, 31);
             txtRate.TabIndex = 5;
             // 
             // txtTime
             // 
+            txtTime.Font = new Font("Segoe UI", 10.8F);
             txtTime.Location = new Point(466, 165);
             txtTime.Name = "txtTime";
-            txtTime.Size = new Size(125, 27);
+            txtTime.Size = new Size(125, 31);
             txtTime.TabIndex = 6;
             // 
             // btnCalculate
             // 
-            btnCalculate.Location = new Point(450, 221);
+            btnCalculate.Font = new Font("Segoe UI", 12F);
+            btnCalculate.Location = new Point(359, 285);
             btnCalculate.Name = "btnCalculate";
-            btnCalculate.Size = new Size(141, 29);
+            btnCalculate.Size = new Size(141, 43);
             btnCalculate.TabIndex = 7;
             btnCalculate.Text = "Calculate Interest";
             btnCalculate.UseVisualStyleBackColor = true;
@@ -116,10 +124,10 @@
             // 
             dgvResult.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvResult.Columns.AddRange(new DataGridViewColumn[] { Principal, Rate, Time, Interest });
-            dgvResult.Location = new Point(211, 285);
+            dgvResult.Location = new Point(-2, 363);
             dgvResult.Name = "dgvResult";
             dgvResult.RowHeadersWidth = 51;
-            dgvResult.Size = new Size(567, 144);
+            dgvResult.Size = new Size(701, 144);
             dgvResult.TabIndex = 8;
             // 
             // Principal
@@ -152,21 +160,22 @@
             // 
             // btnSaveInterest
             // 
-            btnSaveInterest.Location = new Point(607, 221);
+            btnSaveInterest.Font = new Font("Segoe UI", 12F);
+            btnSaveInterest.Location = new Point(522, 285);
             btnSaveInterest.Name = "btnSaveInterest";
             btnSaveInterest.RightToLeft = RightToLeft.Yes;
-            btnSaveInterest.Size = new Size(141, 29);
+            btnSaveInterest.Size = new Size(141, 43);
             btnSaveInterest.TabIndex = 9;
             btnSaveInterest.Text = "Save Interest";
             btnSaveInterest.UseVisualStyleBackColor = true;
             btnSaveInterest.Click += btnSaveInterest_Click;
             // 
-            // Form1
+            // CalculateInterestForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(920, 572);
             Controls.Add(btnSaveInterest);
             Controls.Add(dgvResult);
             Controls.Add(btnCalculate);
@@ -177,8 +186,9 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "Form1";
+            Name = "CalculateInterestForm";
             Text = "Form1";
+            Load += CalculateInterestForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvResult).EndInit();
             ResumeLayout(false);
             PerformLayout();
